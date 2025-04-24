@@ -1,0 +1,27 @@
+.close_btn {
+    position: absolute;
+    z-index: 4;
+    width: 20px;
+    height: 20px;
+    top: 6.2%;
+    left: 96%;
+}
+
+.close_btn::after, .close_btn::before {
+    content: '';
+    background-color: red;
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    cursor: pointer;
+}
+
+.close_btn::after {
+    transform: rotate(45deg);
+    bottom: 5;
+}
+
+.close_btn::before {
+    transform: rotate(-45deg);
+    top: 10;
+}

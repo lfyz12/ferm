@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.navbar1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    min-height: 64px;
+    height: 5.2vw;
+    background: #832440;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar1.fixed {
+    transform: translateY(-100%);
+}
+
+
+.btnAuth {
+    min-width: 96px;
+    width: 6vw;
+    height: 40px;
+    background-color: #BF486A;
+    color: #FFCDDC;
+    /* opacity: 70%; */
+    border: 0;
+}
+
+.btnBasket {
+    height: 40px;
+    width: auto;
+    background: linear-gradient(to right, #e6688b 50%, #BF486A 50%);
+    background-size: 200% 100%;
+    background-position: 101% 0;
+    border: 0;
+    transition: background-position 0.7s;
+}
+
+.btnBasket:hover {
+    background-position: 0 0;
+}
+
+
+.navbar_basket_aprsum {
+    font-size: calc(14px + 2 * (100vw / 1903));
+}
+
+
+.btnText {
+    font-size: calc(14px + 2 * (100vw / 1903));
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ffdee7;
+}
+
+@media (max-width: 1199px) {
+    .btnText {
+        font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 375px) / 1903));
+    }
+}
+
+
+
+.btnAuth:hover,
+.btnBasket:hover,
+.adminBtn:hover,
+.adminPanBtn:hover,
+.admin-icon:hover,
+.btnLogOut:hover {
+    background-color: #e6688b !important;
+}
+
+.btnAuth:active,
+.btnBasket:active,
+.adminBtn:active,
+.adminPanBtn:active,
+.admin-icon:active,
+.btnLogOut:hover {
+    background-color: #e6688b !important;
+}
+
+
+.btnAuth:hover .btnIconFill,
+.adminBtn:hover .btnIconFill,
+.adminPanBtn:hover .btnIconFill {
+    fill: #F5376E;
+    color: #ffdee7;
+}
+
+a:focus-visible {
+    background-color: #9c3d58 !important;
+    box-shadow: 0 0 0 3px #e6688b !important;
+    outline: none;
+}
+
+.adressBox,
+.adressBox:active {
+    width: fit-content;
+    height: 40px;
+    background-color: #d6587b !important;
+    color: #FFCDDC;
+    /* opacity: 70%; */
+}
+
+
+.adressBox:hover {
+    width: fit-content;
+    background-color: #e6688b !important;
+    text-decoration: underline;
+}
+
+.menuAdressText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.adressBoxText {
+    font-size: calc(11px + 5 * (100vw / 1903));
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffdee7;
+    margin-left: 10px;
+}
+
+.adressBoxSvgIcon {
+    width: 10%;
+}
+
+.adressBoxContent {
+    padding-left: 5%;
+}
+
+
+/* @media (max-width: 1299px) {
+    .adressBox {
+        display: none !important;
+    }
+} */
+
+
+@media (max-width: 1499px) {
+    .btnBasket {
+        width: auto;
+        height: 40px;
+        background-color: #962A4A;
+        margin-left: 7px !important;
+    }
+}
+
+.btnBasket:hover .btnBasketFill {
+    stroke: #FFCDDC !important;
+}
+
+.logo {
+    z-index: 4;
+    text-decoration: none;
+    font-size: calc(16px + 6 * (100vw / 1903));
+    font-weight: 700;
+    color: #FFCDDC;
+    text-align: center;
+}
+
+.shop_logo {
+    background: url("../assets/uralskiy_logo.svg") no-repeat left;
+    background-size: 80%;
+    width: 250px;
+    height: 55px;
+}
+
+/* @media (max-width: 800px) {
+    width: 200px;
+} */
+
+@media (max-width: 600px) {
+    .shop_logo {
+        background-size: 100%;
+        width: 160px;
+    }
+}
+
+@media (max-width: 560px) {
+    .shop_logo {
+        background: url("../assets/uralskiy-icon.svg") no-repeat left;
+        background-size: 70%;
+        width: 60px;
+    }
+}
+
+.burgerMenu {
+    width: 42px;
+    height: 28px;
+    display: block;
+    position: relative !important;
+    z-index: 2;
+    cursor: pointer;
+    left: 0;
+}
+
+.burgerMenu.open {
+    z-index: 2;
+}
+
+.burgerMenu::after,
+.burgerMenu::before {
+    content: '';
+    background-color: #FF709A;
+    position: absolute;
+    z-index: 3;
+    width: 29px;
+    height: 5px;
+    left: 0;
+}
+
+.burgerMenu:hover::after,
+.burgerMenu:hover::before,
+.burgerMenu:hover span {
+    background-color: #E24A77;
+}
+
+.burgerMenu span {
+    background-color: #FF709A;
+    content: '';
+    position: absolute;
+    top: 11px;
+    width: 42px;
+    height: 5px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.burgerMenu::after {
+    bottom: 0;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.burgerMenu::before {
+    top: 0;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.burgerMenu.open::after {
+    transform: rotate(45deg);
+    width: 32px;
+    bottom: 11.5px;
+    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.burgerMenu.open::before {
+    transform: rotate(-45deg);
+    width: 32px;
+    top: 11.5px;
+    transition: left 300ms, top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.burgerMenu.open span {
+    transform: scale(0);
+}
+
+
+.menuBox {
+    z-index: 1;
+    width: 15vw !important;
+    background-color: #832440;
+    border: none;
+    /* opacity: .9; */
+}
+
+@media (max-width: 1310px) {
+    .menuBox {
+        width: 200px !important;
+    }
+}
+
+.menuBodyBox {
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 1vw;
+}
+
+
+.offcanvas-backdrop {
+    z-index: 1;
+    opacity: 35% !important;
+}
+
+.menuItemMarker {
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    transition: height 200ms ease-in-out;
+}
+
+.menuItem {
+    font-size: calc(16px + 4 * (100vw / 1903));
+    width: 100%;
+    margin-bottom: 2.5vw;
+    transition: transform 0.3s;
+}
+
+.menuItem:hover{
+    transform: scale(1.1) translateX(10px);
+}
+
+.menuItemText:focus-visible {
+    background-color: #9c3d58 !important;
+    box-shadow: 0 0 0 3px #e6688b !important;
+    outline: none;
+}
+
+.menuItemText {
+    font-size: calc(14px + 4 * (100vw / 1903));
+}
+
+
+.menuItem:hover .menuItemMarker {
+    height: calc(16px + 4 * (100vw / 1903));
+    transition: height 200ms ease-in-out;
+}
+
+.menuAdressText {
+    font-size: calc(12px + 6 * (100vw / 1903));
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFCDDC;
+}
+
+.sepLineMenu {
+    margin: auto;
+    margin-top: 1vw;
+    height: 2px;
+    width: 90%;
+    background-color: white;
+    opacity: .6;
+}
+
+.menuHotLine {
+    font-size: calc(14px + 6 * (100vw / 1903));
+}
+
+.menuPhoneNum {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: calc(14px + 6 * (100vw / 1903));
+}
+
+.menuSocWebText {
+    font-size: calc(14px + 6 * (100vw / 1903));
+}
+
+.btnLogOut {
+    text-align: center;
+    background-color: #BF486A;
+    border: 0;
+    width: 100%;
+    height: 40px;
+}
+
+
+.btnLogOutText {
+    font-size: calc(14px + 3 * (100vw / 1903));
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffdee7;
+}
+
+@media (max-width: 1199px) {
+    .btnLogOutText {
+        font-size: calc(14px + (3 + 3 * 0.7) * ((100vw - 375px) / 1903));
+    }
+}
+
+@media (max-width: 499px) {
+    .btnLogOut {
+        display: none !important;
+    }
+}
+
+.adminPanBtn {
+    width: 45px;
+    height: 45px;
+    background-color: #962A4A;
+    margin-left: 7px !important;
+    border: 0;
+}
+
+
+.adminBtn {
+    display: none !important;
+}
+
+.btnAdmin {
+    width: 7vw;
+}
+
+@media (max-width: 1199px) {
+    .adminBtn {
+        display: block !important;
+        width: 50px;
+        height: 50px;
+        background-color: #962A4A;
+        margin-left: 7px !important;
+        border: 0;
+    }
+
+    .btnAdmin {
+        display: none !important;
+    }
+}
+
+.modal-content {
+    margin: auto;
+    margin-top: 100px;
+
+    width: 23vw;
+    background-color: #E9E9E9;
+    font-size: calc(16px + 4 * (100vw / 1903));
+    font-weight: bold;
+    border-radius: 19px;
+}
+
+@media screen and (max-width: 1350px) {
+    .modal-content {
+        width: 300px;
+    }
+}
+
+.formPhoneBox,
+.formPasswordBox {
+    min-width: 240px;
+    width: 20vw;
+    font-size: calc(14px + 2 * (100vw / 1903));
+    font-weight: bold;
+}
+
+.formPhone,
+.formPassword {
+    min-height: 1.6vw;
+    border: 1px rgb(128, 128, 128) !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.formPhone,
+.formPassword {
+    border: #962a4a 1px solid !important;
+}
+
+.formAuthBtn {
+    min-width: 155px;
+    width: 18vw;
+    min-height: 1.6vw;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: calc(14px + 2 * (100vw / 1903));
+    font-weight: bold;
+}
+
+.formAuthBtn:hover {
+    background-color: #c1c1c1 !important;
+    color: black;
+}
+
+.formAuthBtn:active {
+    color: black !important;
+}
+
+.formLinkBox {
+    min-width: 290px;
+    width: 18vw;
+    font-size: calc(12px + 4 * (100vw / 1903));
+    font-weight: bold;
+}
+
+.checkCodeBox {
+    --ReactInputVerificationCode-itemWidth: 3rem;
+    --ReactInputVerificationCode-itemHeight: 3rem;
+    --ReactInputVerificationCode-itemSpacing: 0.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    width: 10vw;
+    font-size: calc(18px + 2 * (100vw / 1903));
+    font-weight: bold;
+}
+
+
+.formCheckCode {
+
+    min-height: 2vw;
+}
+
+.formCheckCodeBtn {
+    min-width: 155px;
+    width: 18vw;
+    min-height: 1.6vw;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: calc(14px + 2 * (100vw / 1903));
+    font-weight: bold;
+}
+
+.formCheckCodeBtn:hover,
+.passwordRecovBtn:hover {
+    background-color: #c1c1c1 !important;
+    color: black;
+}
+
+.formCheckCodeBtn:active,
+.passwordRecovBtn:active {
+    color: black !important;
+}
+
+.timer {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-size: calc(24px + 4 * (100vw / 1903));
+    font-weight: bold;
+}
+
+.passwordRecovBtn {
+    width: 15vw;
+    height: 1.6vw;
+    background-color: #D9D9D9;
+    color: black;
+    font-size: calc(14px + 2 * (100vw / 1903));
+    font-weight: bold;
+}
+
+.searchString {
+    display: none;
+}
+
+.acceptCloseBtn {
+    width: 20px;
+    height: 20px;
+    top: -20px;
+}
+
+.acceptCloseBtn::after,
+.acceptCloseBtn::before {
+    content: '';
+    background-color: #D9D9D9;
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    cursor: pointer;
+}
+
+.acceptCloseBtn::after {
+    transform: rotate(25deg);
+    bottom: 0;
+}
+
+.acceptCloseBtn::before {
+    transform: rotate(-25deg);
+    top: 0;
+}
+
+.admin-icon {
+    width: 40px;
+    height: 40px;
+    border: 0;
+}
+
+
+.resend_code_button {
+    border: none;
+    cursor: pointer;
+}
+
+.password_recov_title_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password_recov_title {
+    margin: auto;
+}
+
+.back_arrow {
+    cursor: pointer;
+    margin-left: 1vw;
+}
+
+.error-login {
+    color: #c93c3c;
+    font-weight: 500;
+    font-size: calc(12px + 2 * (100vw / 1903));
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menuLogoutItem {
+    font-size: calc(16px + 4 * (100vw / 1903));
+    background-color: #832440 !important;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menuLogoutItem:hover,
+.menuLogoutItem:focus-visible{
+    transform: translateX(5px);
+    text-decoration-thickness: 2px;
+}

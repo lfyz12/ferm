@@ -1,0 +1,27 @@
+.error-modal-header{
+    width: 100%;
+    text-align: center !important;
+}
+.error-modal-btn-close{
+    font-size: calc(14px + 3 * (100vw / 1903));
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffdee7;
+    height: 40px;
+    width: auto;
+    background-color: #d6587b;
+    border: 0;
+}
+
+.error-modal-btn-close:hover,
+.error-modal-btn-close:active{
+    background-color: #e6688b !important;
+}
+
+.error-modal-text{
+    font-size: calc(16px + 4 * (100vw / 1903));
+    text-align: center;
+    font-weight: 500;
+}

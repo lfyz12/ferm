@@ -1,0 +1,18 @@
+.carousel-wrapper {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0px;
+    z-index: 0;
+}
+.carousel-content {
+    display: block;
+    right: 0;
+    min-width: 100vw;
+    z-index: 0;
+}
+
+body {
+    overflow-x: hidden;
+}

@@ -1,0 +1,49 @@
+.assortment-text{
+    font-size: calc(20px + 4 * (100vw/1903));
+    font-weight:500;
+}
+
+.admin-page{
+    background-color: #f3f3f3;
+    border-radius: 17px;
+}
+
+.assortment-switch, .assortment-switch:hover, .assortment-switch:active{
+    background-color: #ED789A !important;
+    border: 0;
+}
+
+.assortment-switch-item{
+    background-color: white !important;
+    color: black !important;
+}
+
+.dropdown-menu.show{
+    background-color: white !important;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.addAssortment{
+    background-color:#ED789A;
+    border: 0;
+    width: calc(200px + 2 * (100vw/1903));
+}
+
+.addAssortment:hover{
+    background-color: #ED789A !important;
+}
+.addAssortment:active{
+    background-color: #962A4A !important;
+}
+
+.givingRole-dropdown{
+    text-decoration: none;
+    color: black;
+}
+
+.givingRole-dropdown:hover{
+    color: black !important;
+}

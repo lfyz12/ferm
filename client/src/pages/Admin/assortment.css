@@ -1,0 +1,96 @@
+.max-size-window {
+
+    min-height: 600px;
+    /* min-height: 100px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 0;
+}
+
+
+.border-1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+    margin: 2px;
+    border-radius: 7px;
+}
+
+.border-2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #ed789996;
+    color: white;
+    margin: 2px;
+    border-radius: 7px;
+}
+
+
+.dropdown-select:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+.dropdown-select:valid {
+    box-shadow: 0 0 5px 1px green;
+}
+
+
+.assortment-edit-header {
+    display: flex;
+}
+
+.btn-trueOrFalse {
+    border: 0;
+    font-size: calc(14px + 4 * (100vw / 1903));
+    font-weight: 400;
+    background-color: #ED789A !important;
+}
+
+.btn-trueOrFalse:hover, .btn-trueOrFalse:active {
+    background-color: #ED789A !important;
+}
+
+.create-assortment-download-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.create-assortment-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.create-assortment-input[type=file] {
+    display: none;
+}
+
+.create-assortment-labelInput {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 3px solid rgba(226, 74, 119, 0.5);
+    color: #2c3034;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.create-assortment-labelSpan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 5px;
+    font-size: calc(14px + 4 * (100vw / 1903));
+}
+
+.create-assortment-labelInput:hover {
+    background-color: rgba(237, 120, 154, 0.7);
+    border-color: transparent;
+    color: #f1f1f1;
+    font-weight: 500;
+}
