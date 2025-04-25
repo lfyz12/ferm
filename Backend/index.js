@@ -15,11 +15,13 @@ const webSocketController = require('./webSockets/webSocketController')
 const allowedOrigin = "https://front-g41u.vercel.app"
 
 const corsOptions ={
-    origin: allowedOrigin, 
-    credentials:true,            //access-control-allow-credentials:true
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+  origin: 'https://front-g41u.vercel.app',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(cookieParser())
 app.use(express.json())  //Это чтобы приложение могло парсить json формат
