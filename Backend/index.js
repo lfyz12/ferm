@@ -42,7 +42,7 @@ const io = require('socket.io')(server, {
 const start = async () => {
     try {
         await sequelize.authenticate()
-        await sequelize.sync({alter:true})
+        // await sequelize.sync({alter:true})
         webSocketController(io)
         server.listen(PORT, () => console.log(`Server started on port ${PORT}`))
     } catch (e) {
