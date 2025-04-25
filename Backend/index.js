@@ -14,7 +14,7 @@ const webSocketController = require('./webSockets/webSocketController')
 
 
 const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'https://front-g41u.vercel.app', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -41,7 +41,13 @@ const io = require('socket.io')(server, {
 //Запуск сервера
 const start = async () => {
     try {
-        await sequelize.authenticate()
+       await sequelize.authenticate()
+    .then(() => {
+        console.log('✅ Успешное подключение к БД');
+    })
+    .catch(err => {
+        console.error('❌ Ошибка подключения к БД:', err);
+    });
         // await sequelize.sync({alter:true})
         webSocketController(io)
         server.listen(PORT, () => console.log(`Server started on port ${PORT}`))
