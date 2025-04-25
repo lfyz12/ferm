@@ -12,11 +12,12 @@ const path = require('path')
 const cookieParser = require('cookie-parser')
 const webSocketController = require('./webSockets/webSocketController')
 
+const allowedOrigin = "https://front-g41u.vercel.app"
 
 const corsOptions ={
-    origin:'https://front-g41u.vercel.app', 
+    origin: allowedOrigin, 
     credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }
 app.use(cors(corsOptions));
 
@@ -31,12 +32,7 @@ app.use('/api', router)
 app.use(errorHandler)
 
 const server = require('http').createServer(app)
-const io = require('socket.io')(server, {
-    cors: {
-        origin: "http://localhost:3000"
-    },
-    path: "/webSocket/"
-})
+
 
 //Запуск сервера
 const start = async () => {
@@ -49,7 +45,7 @@ const start = async () => {
         console.error('❌ Ошибка подключения к БД:', err);
     });
         await sequelize.sync()
-        webSocketController(io)
+       
         server.listen(PORT, '0.0.0.0', () => console.log(`Server started on port ${PORT}`))
     } catch (e) {
         console.log(e)
