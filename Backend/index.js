@@ -48,7 +48,7 @@ const start = async () => {
     .catch(err => {
         console.error('❌ Ошибка подключения к БД:', err);
     });
-        // await sequelize.sync({alter:true})
+        await sequelize.sync({alter:true})
         webSocketController(io)
         server.listen(PORT, () => console.log(`Server started on port ${PORT}`))
     } catch (e) {
