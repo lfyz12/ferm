@@ -5,7 +5,7 @@ const models = require('./models/models') //Инициализация бд
 const cors = require('cors') //Импорт cors
 const fileUpload = require('express-fileupload')
 const router = require('./routes/index')
-const PORT = process.env.PORT || 5000 //Инициализация порта
+const PORT = process.env.PORT || 8080 //Инициализация порта
 const app = express() //Объект приложения
 const errorHandler = require('./middleware/ErrorHandlingMiddleware') //Инициализация еррорхендлера
 const path = require('path')
@@ -50,7 +50,7 @@ const start = async () => {
     });
         await sequelize.sync()
         webSocketController(io)
-        server.listen(8080, () => console.log(`Server started on port ${PORT}`))
+        server.listen(PORT, '0.0.0.0', () => console.log(`Server started on port ${PORT}`))
     } catch (e) {
         console.log(e)
     }
