@@ -50,7 +50,7 @@ const start = async () => {
     });
         await sequelize.sync()
         webSocketController(io)
-        server.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+        server.listen(8080, () => console.log(`Server started on port ${PORT}`))
     } catch (e) {
         console.log(e)
     }
